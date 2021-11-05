@@ -19,8 +19,8 @@ public class Main {
 		try {
 			hospital = Arquivos.lerHospital(camHosp);
 		}catch(IOException | ClassNotFoundException e){
-			//TO-DO: melhorar esta soluÁ„o depois
-			JOptionPane.showMessageDialog(null, "N„o foi possivel ler o arquivo '"+camHosp+"'. Ser· criado um novo arquivo limpo.");
+			//TO-DO: melhorar esta solu√ß√£o depois
+			JOptionPane.showMessageDialog(null, "N√£o foi possivel ler o arquivo '"+camHosp+"'. Ser√° criado um novo arquivo limpo.");
 			Arquivos.gravarHospital(hospital, camHosp);
 		}
 		MenuPrincipal(hospital);
@@ -38,8 +38,8 @@ public class Main {
 				  "1 - Novo paciente.\n"
 				+ "2 - Novo prontuario: dados iniciais.\n"
 				+ "3 - Prontuario: inserir a enfermagem.\n"
-				+ "4 - Chamar prÛximo na lista de espera.\n"
-				+ "5 - Prontuario: inserir dados atendimento mÈdico.\n"
+				+ "4 - Chamar pr√≥ximo na lista de espera.\n"
+				+ "5 - Prontuario: inserir dados atendimento m√©dico.\n"
 				+ "6 - Prontuario: alta de paciente internado.\n"
 				+ "_ _ _ _ _ _ _ _ _ _ _ _ _ \n"
 				+ "7 - Listar todos os prontuarios\n"
@@ -58,7 +58,7 @@ public class Main {
 					"\nPacientes: "+hospital.getPacientes().size()+
 					"\nMedicos: "+hospital.getMedicos().size()+
 					"\nEnfermeiros: "+hospital.getMedicos().size()+
-					"\nProntu·rios finalizados: "+hospital.getAltasMedicas().size()+"\n";
+					"\nProntu√°rios finalizados: "+hospital.getAltasMedicas().size()+"\n";
 			String strListaEspera = hospital.formatarListaDeEspera();
 			
 			op = EntDados.pedirInt(dadosHospital+"____________________________________\n"+opcoesMenu+"\n____________________________________\n---LISTA DE ESPERA:---\n--Nome | Risco--\n"+strListaEspera);
@@ -158,7 +158,7 @@ public class Main {
 			
 
 			if(pro.getRisco() == Hospital.grausDeRisco[3]) {//Vermelho - ATENDIMENTO IMEDIATO!
-				hosp.getEmAtendimentoMedico().add(pro);// o atendimento È feito na hora, basta aguardar o medico dar o diagnostico.
+				hosp.getEmAtendimentoMedico().add(pro);// o atendimento √© feito na hora, basta aguardar o medico dar o diagnostico.
 				JOptionPane.showMessageDialog(null, "ENVIANDO PACIENTE PARA ATENDIMENTO IMEDIATO!");
 			}
 			else {
@@ -170,7 +170,7 @@ public class Main {
 		
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Nao existem prontuarios de pacientes esperando sua avaliaÁ„o de risco.");
+			JOptionPane.showMessageDialog(null, "Nao existem prontuarios de pacientes esperando sua avalia√ß√£o de risco.");
 		}
 		
 	}
@@ -223,7 +223,7 @@ public class Main {
 
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "N„o h· prontuarios de pacientes esperando a finalizaÁ„o do diagnÛstico mÈdico.");
+			JOptionPane.showMessageDialog(null, "N√£o h√° prontuarios de pacientes esperando a finaliza√ß√£o do diagn√≥stico m√©dico.");
 		}
 	}
 	
@@ -246,7 +246,7 @@ public class Main {
 			
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "N„o h· prontuarios de pacientes internados.");
+			JOptionPane.showMessageDialog(null, "N√£o h√° prontuarios de pacientes internados.");
 		}
 	}
 	//7
@@ -297,38 +297,6 @@ public class Main {
 		//TO DO
 	}
 
-	
-	
-	/*
-	static void MenuProntuario(Prontuario pro) {
-		
-		JOptionPane.showMessageDialog(null, pro.formatarDados());
-		
-		String opcoesMenu = 
-				  "1 - Exibir informacoes prontuario.\n" 
-			    + "2 - Editar data pagamento\n"
-				+ "0 - voltar";
-				
-		
-		int op = -1;//valor inicial.
-		
-		while(op != 0) {
-			
-			
-			op = EntDados.pedirInt(opcoesMenu);
-			switch(op) {
-				case 1:
-					JOptionPane.showMessageDialog(null, pro.formatarDados());
-					break;
-				case 2:
-					LocalDate data = EntDados.pedirData("Data pagamento:");
-					
-					break;
-				case 0:
-					System.out.println("Voltando");
-					break;
-			}
-		}
-	}*/
+
 
 }
