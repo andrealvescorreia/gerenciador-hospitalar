@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 public class Main {
 	
 	private static final String nomeArquivoHosp = "dadosHospital.byte";
-	private static final String camHosp ="C:/Users/andre/Desktop/teste/"+nomeArquivoHosp;
+	private static final String camHosp ="C:/"+nomeArquivoHosp;
 	
 	public static void main(String[] args) {
 		
