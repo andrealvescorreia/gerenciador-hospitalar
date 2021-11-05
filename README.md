@@ -4,7 +4,7 @@
 Projeto em Java com o objetivo de registrar os dados de prontuarios de pacientes, além de gerenciar-los.
 O programa é amigável a um fluxo de atendimento em tempo real, e em um hospital real.
 
-Os dados ficam salvos em arquivo .byte por meio da serialização.
+Por meio da *serialização*, os dados ficam salvos em arquivo *.byte*, e o local deste arquivo pode ser mudado ao editar a string _**camHosp**_, presente em *Main.java*
 
 Feito para avaliação da cadeira de Linguagem de Programação II, que foi ministrada pelo docente Fábio Júnior Francisco, no curso de Computação da UEPB.
 
